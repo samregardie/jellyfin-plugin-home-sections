@@ -5,13 +5,13 @@ using System.Net.Http.Json;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using Jellyfin.Extensions;
-using Jellyfin.Plugin.HomeScreenSections.Configuration;
-using Jellyfin.Plugin.HomeScreenSections.Helpers;
-using Jellyfin.Plugin.HomeScreenSections.HomeScreen.Sections;
-using Jellyfin.Plugin.HomeScreenSections.Library;
-using Jellyfin.Plugin.HomeScreenSections.Model;
-using Jellyfin.Plugin.HomeScreenSections.Model.Dto;
-using Jellyfin.Plugin.HomeScreenSections.Services;
+using Jellyfin.Plugin.SamHomeSections.Configuration;
+using Jellyfin.Plugin.SamHomeSections.Helpers;
+using Jellyfin.Plugin.SamHomeSections.HomeScreen.Sections;
+using Jellyfin.Plugin.SamHomeSections.Library;
+using Jellyfin.Plugin.SamHomeSections.Model;
+using Jellyfin.Plugin.SamHomeSections.Model.Dto;
+using Jellyfin.Plugin.SamHomeSections.Services;
 using MediaBrowser.Common.Configuration;
 using MediaBrowser.Common.Extensions;
 using MediaBrowser.Controller;
@@ -25,13 +25,13 @@ using Microsoft.Extensions.Primitives;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Jellyfin.Plugin.HomeScreenSections.Controllers
+namespace Jellyfin.Plugin.SamHomeSections.Controllers
 {
     /// <summary>
     /// API controller for the Modular Home Screen.
     /// </summary>
     [ApiController]
-    [Route("[controller]")]
+    [Route("SamHomeSections")]
     public class HomeScreenController : ControllerBase
     {
         private readonly IHomeScreenManager m_homeScreenManager;

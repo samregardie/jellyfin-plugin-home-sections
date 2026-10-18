@@ -7,7 +7,7 @@ using MediaBrowser.Controller.Entities.Movies;
 using MediaBrowser.Controller.Library;
 using MediaBrowser.Model.Entities;
 
-namespace Jellyfin.Plugin.HomeScreenSections.Helpers;
+namespace Jellyfin.Plugin.SamHomeSections.Helpers;
 
 public static class MiscExtensions
 {

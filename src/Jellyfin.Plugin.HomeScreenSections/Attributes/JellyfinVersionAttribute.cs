@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Jellyfin.Plugin.HomeScreenSections.Attributes
+namespace Jellyfin.Plugin.SamHomeSections.Attributes
 {
     [AttributeUsage(AttributeTargets.Assembly)]
     public class JellyfinVersionAttribute : Attribute

@@ -1,7 +1,7 @@
-using Jellyfin.Plugin.HomeScreenSections.Configuration;
-using Jellyfin.Plugin.HomeScreenSections.Helpers;
-using Jellyfin.Plugin.HomeScreenSections.JellyfinVersionSpecific;
-using Jellyfin.Plugin.HomeScreenSections.Model.Dto;
+using Jellyfin.Plugin.SamHomeSections.Configuration;
+using Jellyfin.Plugin.SamHomeSections.Helpers;
+using Jellyfin.Plugin.SamHomeSections.JellyfinVersionSpecific;
+using Jellyfin.Plugin.SamHomeSections.Model.Dto;
 using MediaBrowser.Controller.Dto;
 using MediaBrowser.Controller.Entities;
 using MediaBrowser.Controller.Entities.TV;
@@ -9,7 +9,7 @@ using MediaBrowser.Controller.Library;
 using MediaBrowser.Model.Entities;
 using Microsoft.Extensions.Logging;
 
-namespace Jellyfin.Plugin.HomeScreenSections.HomeScreen.Sections.RecentlyAdded
+namespace Jellyfin.Plugin.SamHomeSections.HomeScreen.Sections.RecentlyAdded
 {
     public class RecentlyAddedShowsSection : RecentlyAddedSectionBase
     {

@@ -1,4 +1,4 @@
-namespace Jellyfin.Plugin.HomeScreenSections.Model.Dto
+namespace Jellyfin.Plugin.SamHomeSections.Model.Dto
 {
     public class CachedImageDto
     {

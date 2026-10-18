@@ -1,6 +1,6 @@
-using Jellyfin.Plugin.HomeScreenSections.Configuration;
+using Jellyfin.Plugin.SamHomeSections.Configuration;
 
-namespace Jellyfin.Plugin.HomeScreenSections.Helpers
+namespace Jellyfin.Plugin.SamHomeSections.Helpers
 {
     public static class PluginConfigurationHelper
     {

@@ -1,6 +1,6 @@
-using Jellyfin.Plugin.HomeScreenSections.Configuration;
-using Jellyfin.Plugin.HomeScreenSections.Helpers;
-using Jellyfin.Plugin.HomeScreenSections.Model.Dto;
+using Jellyfin.Plugin.SamHomeSections.Configuration;
+using Jellyfin.Plugin.SamHomeSections.Helpers;
+using Jellyfin.Plugin.SamHomeSections.Model.Dto;
 using MediaBrowser.Controller.Dto;
 using MediaBrowser.Controller.Entities;
 using MediaBrowser.Controller.Entities.TV;
@@ -11,7 +11,7 @@ using MediaBrowser.Model.Entities;
 using MediaBrowser.Model.Querying;
 using Microsoft.AspNetCore.Http;
 
-namespace Jellyfin.Plugin.HomeScreenSections.HomeScreen.Sections.Latest
+namespace Jellyfin.Plugin.SamHomeSections.HomeScreen.Sections.Latest
 {
     public class LatestShowsSection : LatestSectionBase
     {

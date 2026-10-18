@@ -1,9 +1,9 @@
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.Loader;
-using Jellyfin.Plugin.HomeScreenSections.Helpers;
+using Jellyfin.Plugin.SamHomeSections.Helpers;
 
-namespace Jellyfin.Plugin.HomeScreenSections;
+namespace Jellyfin.Plugin.SamHomeSections;
 
 public class ModuleInitializer
 {
@@ -13,7 +13,7 @@ public class ModuleInitializer
     public static void Initialize()
     {
         Assembly assembly = typeof(HomeScreenSectionsPlugin).Assembly;
-        AssemblyLoadContext assemblyLoadContext = new AssemblyLoadContext("Jellyfin.Plugin.HomeScreenSections");
+        AssemblyLoadContext assemblyLoadContext = new AssemblyLoadContext("Jellyfin.Plugin.SamHomeSections");
         string[] resources = assembly.GetManifestResourceNames();
             
         foreach (string resource in resources.Where(x => x.EndsWith(".dll")))

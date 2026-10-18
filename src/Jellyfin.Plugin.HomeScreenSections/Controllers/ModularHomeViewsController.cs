@@ -1,6 +1,6 @@
-﻿using Jellyfin.Plugin.HomeScreenSections.Configuration;
-using Jellyfin.Plugin.HomeScreenSections.Helpers;
-using Jellyfin.Plugin.HomeScreenSections.Library;
+﻿using Jellyfin.Plugin.SamHomeSections.Configuration;
+using Jellyfin.Plugin.SamHomeSections.Helpers;
+using Jellyfin.Plugin.SamHomeSections.Library;
 using MediaBrowser.Controller.Library;
 using MediaBrowser.Model;
 using MediaBrowser.Model.Plugins;
@@ -8,15 +8,15 @@ using MediaBrowser.Model.Querying;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Jellyfin.Plugin.HomeScreenSections.Services;
+using Jellyfin.Plugin.SamHomeSections.Services;
 
-namespace Jellyfin.Plugin.HomeScreenSections.Controllers
+namespace Jellyfin.Plugin.SamHomeSections.Controllers
 {
     /// <summary>
     /// API controller for Modular Home plugin.
     /// </summary>
     [ApiController]
-    [Route("[controller]")]
+    [Route("SamHomeViews")]
     public class ModularHomeViewsController : ControllerBase
     {
         private readonly ILogger<ModularHomeViewsController> m_logger;

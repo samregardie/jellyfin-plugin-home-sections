@@ -1,14 +1,14 @@
-using Jellyfin.Plugin.HomeScreenSections.JellyfinVersionSpecific;
+using Jellyfin.Plugin.SamHomeSections.JellyfinVersionSpecific;
 using MediaBrowser.Model.Tasks;
 using Microsoft.Extensions.Logging;
 
-namespace Jellyfin.Plugin.HomeScreenSections.Services
+namespace Jellyfin.Plugin.SamHomeSections.Services
 {
     public class ImageCacheCleanupTask : IScheduledTask
     {
         public string Name => "Home Sections Image Cache Cleanup";
 
-        public string Key => "Jellyfin.Plugin.HomeScreenSections.ImageCacheCleanup";
+        public string Key => "Jellyfin.Plugin.SamHomeSections.ImageCacheCleanup";
         
         public string Description => "Cleans up expired cached images from the Home Screen Sections plugin";
         

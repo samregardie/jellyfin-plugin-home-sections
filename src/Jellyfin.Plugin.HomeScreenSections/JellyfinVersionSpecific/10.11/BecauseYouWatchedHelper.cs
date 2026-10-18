@@ -1,7 +1,7 @@
 ﻿using Jellyfin.Extensions;
-using Jellyfin.Plugin.HomeScreenSections.Helpers;
-using Jellyfin.Plugin.HomeScreenSections.HomeScreen.Sections;
-using Jellyfin.Plugin.HomeScreenSections.Model.Dto;
+using Jellyfin.Plugin.SamHomeSections.Helpers;
+using Jellyfin.Plugin.SamHomeSections.HomeScreen.Sections;
+using Jellyfin.Plugin.SamHomeSections.Model.Dto;
 using MediaBrowser.Controller.Dto;
 using MediaBrowser.Controller.Entities;
 using MediaBrowser.Controller.Library;
@@ -9,7 +9,7 @@ using MediaBrowser.Model.Configuration;
 using MediaBrowser.Model.Entities;
 using Microsoft.AspNetCore.Identity;
 
-namespace Jellyfin.Plugin.HomeScreenSections.JellyfinVersionSpecific
+namespace Jellyfin.Plugin.SamHomeSections.JellyfinVersionSpecific
 {
     public static class BecauseYouWatchedHelper
     {

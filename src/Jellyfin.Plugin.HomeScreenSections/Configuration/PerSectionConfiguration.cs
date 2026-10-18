@@ -1,7 +1,7 @@
 ﻿using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 
-namespace Jellyfin.Plugin.HomeScreenSections.Configuration
+namespace Jellyfin.Plugin.SamHomeSections.Configuration
 {
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum PluginConfigurationType

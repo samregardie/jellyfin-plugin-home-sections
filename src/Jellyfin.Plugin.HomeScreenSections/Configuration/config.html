@@ -493,9 +493,9 @@
     <script type="text/javascript">
         (() => {
             // Plugin GUID for configuration API
-            const pluginId = 'b8298e01-2697-407a-b44d-aa8dc795e850';
+            const pluginId = '7b2a6b97-e928-4cdc-8de9-08518431d2fe';
             // Plugin assembly name for transformation cache system
-            const pluginAssemblyName = 'Jellyfin.Plugin.HomeScreenSections';
+            const pluginAssemblyName = 'Jellyfin.Plugin.SamHomeSections';
 
             // Centralized Arr service configuration
             const arrServiceConfigs = [
@@ -565,7 +565,7 @@
             function translatePage() {
 
                 window.ApiClient.ajax({
-                    url: ApiClient.getUrl('ModularHomeViews/Translations') + '?language=' + encodeURIComponent(uiLanguage),
+                    url: ApiClient.getUrl('SamHomeViews/Translations') + '?language=' + encodeURIComponent(uiLanguage),
                     type: 'GET'
                 }).then(response => response.json()).then(function (translations) {
                     pageTranslations = translations;
@@ -861,7 +861,7 @@
                 const link = document.createElement('link');
                 link.setAttribute('rel', 'stylesheet');
                 link.setAttribute('data-id', 'hssConfigStylesheet');
-                link.setAttribute('href', window.ApiClient.getUrl('HomeScreen/config.css'));
+                link.setAttribute('href', window.ApiClient.getUrl('SamHomeSections/config.css'));
                 document.head.appendChild(link);
             }
 
@@ -1102,7 +1102,7 @@
                 const isRandomized = knownRandomizedSections.indexOf(sectionInfo.Section) !== -1;
 
                 window.ApiClient.ajax({
-                    url: window.ApiClient.getUrl('HomeScreen/Section/' + sectionInfo.Section, {
+                    url: window.ApiClient.getUrl('SamHomeSections/Section/' + sectionInfo.Section, {
                         UserId: window.ApiClient.getCurrentUserId(),
                         AdditionalData: sectionInfo.AdditionalData
                     }),
@@ -1588,7 +1588,7 @@
                         }, 500);
 
                         window.ApiClient.ajax({
-                            url: ApiClient.getUrl('ModularHomeViews/Sections') + '?language=' + encodeURIComponent(uiLanguage),
+                            url: ApiClient.getUrl('SamHomeViews/Sections') + '?language=' + encodeURIComponent(uiLanguage),
                             type: 'GET'
                         }).then(response => response.json()).then(function (json) {
                             disabledSections = {};
@@ -1669,7 +1669,7 @@
                         setButtonState(btnBustHomeSectionsCache, true, originalText);
 
                         window.ApiClient.ajax({
-                            url: window.ApiClient.getUrl('HomeScreen/BustCache'),
+                            url: window.ApiClient.getUrl('SamHomeSections/BustCache'),
                             type: 'POST',
                             dataType: 'json',
                             headers: {
@@ -1694,7 +1694,7 @@
 
                         // First bust static assets cache (Home Sections)
                         const staticAssetsPromise = window.ApiClient.ajax({
-                            url: window.ApiClient.getUrl('HomeScreen/BustCache'),
+                            url: window.ApiClient.getUrl('SamHomeSections/BustCache'),
                             type: 'POST',
                             dataType: 'json',
                             headers: {

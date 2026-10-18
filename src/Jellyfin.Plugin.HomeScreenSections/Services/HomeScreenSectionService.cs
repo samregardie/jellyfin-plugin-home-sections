@@ -1,15 +1,15 @@
 using System.Collections.Concurrent;
 using System.Threading.Channels;
 using Jellyfin.Extensions;
-using Jellyfin.Plugin.HomeScreenSections.Configuration;
-using Jellyfin.Plugin.HomeScreenSections.Data;
-using Jellyfin.Plugin.HomeScreenSections.Helpers;
-using Jellyfin.Plugin.HomeScreenSections.Library;
+using Jellyfin.Plugin.SamHomeSections.Configuration;
+using Jellyfin.Plugin.SamHomeSections.Data;
+using Jellyfin.Plugin.SamHomeSections.Helpers;
+using Jellyfin.Plugin.SamHomeSections.Library;
 using MediaBrowser.Controller;
 using MediaBrowser.Controller.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace Jellyfin.Plugin.HomeScreenSections.Services
+namespace Jellyfin.Plugin.SamHomeSections.Services
 {
     public class HomeScreenSectionService
     {

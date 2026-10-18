@@ -1,9 +1,9 @@
-﻿using Jellyfin.Plugin.HomeScreenSections.Helpers;
-using Jellyfin.Plugin.HomeScreenSections.Library;
+﻿using Jellyfin.Plugin.SamHomeSections.Helpers;
+using Jellyfin.Plugin.SamHomeSections.Library;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Linq;
 
-namespace Jellyfin.Plugin.HomeScreenSections.Services
+namespace Jellyfin.Plugin.SamHomeSections.Services
 {
     public class TranslationManager : ITranslationManager
     {

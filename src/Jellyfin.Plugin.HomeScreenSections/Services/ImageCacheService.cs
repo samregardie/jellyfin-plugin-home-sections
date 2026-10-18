@@ -1,12 +1,12 @@
 using System.Collections.Concurrent;
 using System.Security.Cryptography;
 using System.Text;
-using Jellyfin.Plugin.HomeScreenSections.Model.Dto;
+using Jellyfin.Plugin.SamHomeSections.Model.Dto;
 using MediaBrowser.Common.Configuration;
 using Microsoft.Extensions.Logging;
 using SkiaSharp;
 
-namespace Jellyfin.Plugin.HomeScreenSections.Services
+namespace Jellyfin.Plugin.SamHomeSections.Services
 {
     public class ImageCacheService
     {
@@ -25,7 +25,7 @@ namespace Jellyfin.Plugin.HomeScreenSections.Services
             m_logger = logger;
             m_applicationPaths = applicationPaths;
             m_httpClient = httpClient;
-            m_cacheDirectory = Path.Combine(applicationPaths.CachePath, "HomeScreenSections", "Images");
+            m_cacheDirectory = Path.Combine(applicationPaths.CachePath, "SamHomeSections", "Images");
             Directory.CreateDirectory(m_cacheDirectory);
             // Load existing cache entries on startup
             LoadCacheIndex();

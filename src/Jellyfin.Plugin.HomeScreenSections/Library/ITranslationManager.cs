@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
 
-namespace Jellyfin.Plugin.HomeScreenSections.Library
+namespace Jellyfin.Plugin.SamHomeSections.Library
 {
     public interface ITranslationManager
     {

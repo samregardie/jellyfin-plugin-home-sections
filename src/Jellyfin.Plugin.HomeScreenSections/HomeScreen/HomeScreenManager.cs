@@ -1,12 +1,12 @@
 using System.Diagnostics;
-using Jellyfin.Plugin.HomeScreenSections.Configuration;
-using Jellyfin.Plugin.HomeScreenSections.HomeScreen.Sections;
-using Jellyfin.Plugin.HomeScreenSections.HomeScreen.Sections.Latest;
-using Jellyfin.Plugin.HomeScreenSections.HomeScreen.Sections.Persons;
-using Jellyfin.Plugin.HomeScreenSections.HomeScreen.Sections.RecentlyAdded;
-using Jellyfin.Plugin.HomeScreenSections.HomeScreen.Sections.Upcoming;
-using Jellyfin.Plugin.HomeScreenSections.Library;
-using Jellyfin.Plugin.HomeScreenSections.Model.Dto;
+using Jellyfin.Plugin.SamHomeSections.Configuration;
+using Jellyfin.Plugin.SamHomeSections.HomeScreen.Sections;
+using Jellyfin.Plugin.SamHomeSections.HomeScreen.Sections.Latest;
+using Jellyfin.Plugin.SamHomeSections.HomeScreen.Sections.Persons;
+using Jellyfin.Plugin.SamHomeSections.HomeScreen.Sections.RecentlyAdded;
+using Jellyfin.Plugin.SamHomeSections.HomeScreen.Sections.Upcoming;
+using Jellyfin.Plugin.SamHomeSections.Library;
+using Jellyfin.Plugin.SamHomeSections.Model.Dto;
 using MediaBrowser.Common.Configuration;
 using MediaBrowser.Model.Dto;
 using MediaBrowser.Model.Querying;
@@ -16,7 +16,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Jellyfin.Plugin.HomeScreenSections.HomeScreen
+namespace Jellyfin.Plugin.SamHomeSections.HomeScreen
 {
     /// <summary>
     /// Manager for the Modular Home Screen.

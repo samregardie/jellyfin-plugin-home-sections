@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using System.Runtime.Loader;
-using Jellyfin.Plugin.HomeScreenSections.Configuration;
-using Jellyfin.Plugin.HomeScreenSections.Library;
+using Jellyfin.Plugin.SamHomeSections.Configuration;
+using Jellyfin.Plugin.SamHomeSections.Library;
 using MediaBrowser.Common.Configuration;
 using MediaBrowser.Common.Net;
 using MediaBrowser.Common.Plugins;
@@ -11,15 +11,15 @@ using MediaBrowser.Model.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Jellyfin.Plugin.HomeScreenSections
+namespace Jellyfin.Plugin.SamHomeSections
 {
     public class HomeScreenSectionsPlugin : BasePlugin<PluginConfiguration>, IPlugin, IHasPluginConfiguration, IHasWebPages
     {
         internal IServerConfigurationManager ServerConfigurationManager { get; private set; }
         
-        public override Guid Id => Guid.Parse("b8298e01-2697-407a-b44d-aa8dc795e850");
+        public override Guid Id => Guid.Parse("7b2a6b97-e928-4cdc-8de9-08518431d2fe");
 
-        public override string Name => "Home Screen Sections";
+        public override string Name => "Sam Home Sections";
 
         public static HomeScreenSectionsPlugin Instance { get; private set; } = null!;
         
@@ -39,7 +39,7 @@ namespace Jellyfin.Plugin.HomeScreenSections
             
             homeScreenManager.RegisterBuiltInResultsDelegates();
         
-            string homeScreenSectionsConfigDir = Path.Combine(applicationPaths.PluginConfigurationsPath, "Jellyfin.Plugin.HomeScreenSections");
+            string homeScreenSectionsConfigDir = Path.Combine(applicationPaths.PluginConfigurationsPath, "Jellyfin.Plugin.SamHomeSections");
             if (!Directory.Exists(homeScreenSectionsConfigDir))
             {
                 Directory.CreateDirectory(homeScreenSectionsConfigDir);

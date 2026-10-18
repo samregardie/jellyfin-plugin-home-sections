@@ -2,7 +2,7 @@
 using MediaBrowser.Controller.Library;
 using MediaBrowser.Model.Querying;
 
-namespace Jellyfin.Plugin.HomeScreenSections.JellyfinVersionSpecific
+namespace Jellyfin.Plugin.SamHomeSections.JellyfinVersionSpecific
 {
     public static class ExtensionsHelper
     {

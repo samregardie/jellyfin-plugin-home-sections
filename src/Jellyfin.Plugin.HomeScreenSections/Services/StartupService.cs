@@ -5,10 +5,10 @@ using System.Reflection;
 using System.Runtime.Loader;
 using System.Text;
 using System.Text.RegularExpressions;
-using Jellyfin.Plugin.HomeScreenSections.Helpers;
-using Jellyfin.Plugin.HomeScreenSections.JellyfinVersionSpecific;
-using Jellyfin.Plugin.HomeScreenSections.Library;
-using Jellyfin.Plugin.HomeScreenSections.Model;
+using Jellyfin.Plugin.SamHomeSections.Helpers;
+using Jellyfin.Plugin.SamHomeSections.JellyfinVersionSpecific;
+using Jellyfin.Plugin.SamHomeSections.Library;
+using Jellyfin.Plugin.SamHomeSections.Model;
 using MediaBrowser.Common.Configuration;
 using MediaBrowser.Common.Net;
 using MediaBrowser.Controller;
@@ -22,13 +22,13 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Jellyfin.Plugin.HomeScreenSections.Services
+namespace Jellyfin.Plugin.SamHomeSections.Services
 {
     public class StartupService : IScheduledTask
     {
         public string Name => "HomeScreenSections Startup";
 
-        public string Key => "Jellyfin.Plugin.HomeScreenSections.Startup";
+        public string Key => "Jellyfin.Plugin.SamHomeSections.Startup";
         
         public string Description => "Startup Service for HomeScreenSections";
         
@@ -65,7 +65,7 @@ namespace Jellyfin.Plugin.HomeScreenSections.Services
             List<JObject> payloads = new List<JObject>();
             {
                 JObject payload = new JObject();
-                payload.Add("id", "e531b5a0-5493-42b0-b632-619e2d06db5c");
+                payload.Add("id", "d89effa8-1ecb-4227-9ebe-0bd762e62ac9");
                 payload.Add("fileNamePattern", "index.html");
                 payload.Add("callbackAssembly", GetType().Assembly.FullName);
                 payload.Add("callbackClass", typeof(TransformationPatches).FullName);
@@ -157,8 +157,8 @@ namespace Jellyfin.Plugin.HomeScreenSections.Services
             JObject payload = new JObject
             {
                 { "Id", typeof(HomeScreenSectionsPlugin).Namespace },
-                { "Url", $"{(supportsSubUrls ? "" : rootUrl)}/ModularHomeViews/settings" },
-                { "DisplayText", "Modular Home" },
+                { "Url", $"{(supportsSubUrls ? "" : rootUrl)}/SamHomeViews/settings" },
+                { "DisplayText", "Sam Home Sections" },
                 { "Icon", "ballot" },
                 { "Version", pluginPageConfigVersion },
                 { "IsEnabledAssembly", Assembly.GetExecutingAssembly().FullName },

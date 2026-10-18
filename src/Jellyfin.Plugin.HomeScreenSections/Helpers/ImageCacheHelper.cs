@@ -1,8 +1,8 @@
-using Jellyfin.Plugin.HomeScreenSections.Configuration;
-using Jellyfin.Plugin.HomeScreenSections.Services;
+using Jellyfin.Plugin.SamHomeSections.Configuration;
+using Jellyfin.Plugin.SamHomeSections.Services;
 using Microsoft.Extensions.Logging;
 
-namespace Jellyfin.Plugin.HomeScreenSections.Helpers
+namespace Jellyfin.Plugin.SamHomeSections.Helpers
 {
     public static class ImageCacheHelper
     {
@@ -27,7 +27,7 @@ namespace Jellyfin.Plugin.HomeScreenSections.Helpers
 
                 if (!string.IsNullOrEmpty(cacheKey))
                 {
-                    return $"/HomeScreen/CachedImage/{cacheKey}";
+                    return $"/SamHomeSections/CachedImage/{cacheKey}";
                 }
 
                 logger?.LogWarning("Failed to cache image from {SourceUrl}, using original URL", sourceUrl);

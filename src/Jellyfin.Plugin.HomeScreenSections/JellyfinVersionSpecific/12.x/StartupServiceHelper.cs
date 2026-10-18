@@ -1,6 +1,6 @@
 ﻿using MediaBrowser.Model.Tasks;
 
-namespace Jellyfin.Plugin.HomeScreenSections.JellyfinVersionSpecific
+namespace Jellyfin.Plugin.SamHomeSections.JellyfinVersionSpecific
 {
     public static class StartupServiceHelper
     {

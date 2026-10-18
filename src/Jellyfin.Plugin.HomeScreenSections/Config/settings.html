@@ -35,7 +35,7 @@
 
                 // Translate static page elements
                 ApiClient.fetch({
-                    url: ApiClient.getUrl('ModularHomeViews/Translations') + '?language=' + encodeURIComponent(uiLanguage),
+                    url: ApiClient.getUrl('SamHomeViews/Translations') + '?language=' + encodeURIComponent(uiLanguage),
                     type: 'GET',
                     dataType: 'json',
                     headers: {
@@ -54,7 +54,7 @@
                 });
 
                 ApiClient.fetch({
-                    url: ApiClient.getUrl('HomeScreen/Meta'),
+                    url: ApiClient.getUrl('SamHomeSections/Meta'),
                     type: 'GET',
                     dataType: 'json',
                     headers: {
@@ -75,7 +75,7 @@
                     }
 
                     ApiClient.fetch({
-                        url: ApiClient.getUrl('ModularHomeViews/UserSettings?userId=' + ApiClient.getCurrentUserId()),
+                        url: ApiClient.getUrl('SamHomeViews/UserSettings?userId=' + ApiClient.getCurrentUserId()),
                         type: 'GET',
                         dataType: 'json',
                         headers: {
@@ -83,7 +83,7 @@
                         }
                     }).then(function (settings) {
                         ApiClient.fetch({
-                            url: ApiClient.getUrl('ModularHomeViews/Sections') + '?language=' + encodeURIComponent(uiLanguage),
+                            url: ApiClient.getUrl('SamHomeViews/Sections') + '?language=' + encodeURIComponent(uiLanguage),
                             type: 'GET',
                             dataType: 'json',
                             headers: {
@@ -149,7 +149,7 @@
                         });
 
                         ApiClient.ajax({
-                            url: ApiClient.getUrl('ModularHomeViews/UserSettings'),
+                            url: ApiClient.getUrl('SamHomeViews/UserSettings'),
                             type: 'POST',
                             data: JSON.stringify(data),
                             contentType: 'application/json'

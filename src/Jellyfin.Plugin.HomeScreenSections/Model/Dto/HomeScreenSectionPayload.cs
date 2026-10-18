@@ -1,6 +1,6 @@
-using Jellyfin.Plugin.HomeScreenSections.Configuration;
+using Jellyfin.Plugin.SamHomeSections.Configuration;
 
-namespace Jellyfin.Plugin.HomeScreenSections.Model.Dto
+namespace Jellyfin.Plugin.SamHomeSections.Model.Dto
 {
     public class HomeScreenSectionPayload
     {

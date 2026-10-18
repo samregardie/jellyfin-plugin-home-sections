@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Jellyfin.Plugin.HomeScreenSections.Model
+namespace Jellyfin.Plugin.SamHomeSections.Model
 {
     public class DiscoverRequestPayload
     {

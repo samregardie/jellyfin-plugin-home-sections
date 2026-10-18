@@ -24,7 +24,7 @@ if (typeof HomeScreenSectionsHandler == 'undefined') {
         },
         clickHandler: function(event) {
             window.ApiClient.ajax({
-                url: window.ApiClient.getUrl("HomeScreen/DiscoverRequest"),
+                url: window.ApiClient.getUrl("SamHomeSections/DiscoverRequest"),
                 type: "POST",
                 data: JSON.stringify({
                     UserId: window.ApiClient._currentUser.Id,

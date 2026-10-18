@@ -1,9 +1,9 @@
-using Jellyfin.Plugin.HomeScreenSections.Configuration;
+using Jellyfin.Plugin.SamHomeSections.Configuration;
 using MediaBrowser.Controller.Dto;
 using MediaBrowser.Controller.Library;
 using MediaBrowser.Model.Entities;
 
-namespace Jellyfin.Plugin.HomeScreenSections.HomeScreen.Sections.RecentlyAdded
+namespace Jellyfin.Plugin.SamHomeSections.HomeScreen.Sections.RecentlyAdded
 {
     public class RecentlyAddedAudioBooksSection : RecentlyAddedSectionBase
     {

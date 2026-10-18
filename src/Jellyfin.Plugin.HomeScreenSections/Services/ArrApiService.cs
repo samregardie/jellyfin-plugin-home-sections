@@ -1,8 +1,8 @@
 using System.Text.Json;
 using Microsoft.Extensions.Logging;
-using Jellyfin.Plugin.HomeScreenSections.Configuration;
+using Jellyfin.Plugin.SamHomeSections.Configuration;
 
-namespace Jellyfin.Plugin.HomeScreenSections.Services
+namespace Jellyfin.Plugin.SamHomeSections.Services
 {
     public enum ArrServiceType
     {

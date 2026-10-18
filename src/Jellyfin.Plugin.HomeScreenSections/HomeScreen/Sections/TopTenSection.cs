@@ -1,8 +1,8 @@
 using Jellyfin.Extensions;
-using Jellyfin.Plugin.HomeScreenSections.Configuration;
-using Jellyfin.Plugin.HomeScreenSections.Helpers;
-using Jellyfin.Plugin.HomeScreenSections.Library;
-using Jellyfin.Plugin.HomeScreenSections.Model.Dto;
+using Jellyfin.Plugin.SamHomeSections.Configuration;
+using Jellyfin.Plugin.SamHomeSections.Helpers;
+using Jellyfin.Plugin.SamHomeSections.Library;
+using Jellyfin.Plugin.SamHomeSections.Model.Dto;
 using MediaBrowser.Controller.Collections;
 using MediaBrowser.Controller.Dto;
 using MediaBrowser.Controller.Entities;
@@ -14,7 +14,7 @@ using MediaBrowser.Model.Entities;
 using MediaBrowser.Model.Querying;
 using Microsoft.AspNetCore.Http;
 
-namespace Jellyfin.Plugin.HomeScreenSections.HomeScreen.Sections;
+namespace Jellyfin.Plugin.SamHomeSections.HomeScreen.Sections;
 
 public class TopTenSection : IHomeScreenSection
 {

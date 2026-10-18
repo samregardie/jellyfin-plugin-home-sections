@@ -1,15 +1,15 @@
 ﻿using System.Reflection;
-using Jellyfin.Plugin.HomeScreenSections.JellyfinVersionSpecific;
-using Jellyfin.Plugin.HomeScreenSections.Library;
+using Jellyfin.Plugin.SamHomeSections.JellyfinVersionSpecific;
+using Jellyfin.Plugin.SamHomeSections.Library;
 using MediaBrowser.Model.Tasks;
 using Newtonsoft.Json.Linq;
 
-namespace Jellyfin.Plugin.HomeScreenSections.Services
+namespace Jellyfin.Plugin.SamHomeSections.Services
 {
     public class DailyTranslationCacheService : IScheduledTask
     {
         public string Name => "HSS Daily Translation Cache";
-        public string Key => "Jellyfin.Plugin.HomeScreenSections.DailyTranslationCache";
+        public string Key => "Jellyfin.Plugin.SamHomeSections.DailyTranslationCache";
         public string Description => "Goes to GitHub and downloads the latest translation files.";
         public string Category => "Maintenance";
 

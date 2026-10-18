@@ -1,10 +1,10 @@
-using Jellyfin.Plugin.HomeScreenSections.Configuration;
-using Jellyfin.Plugin.HomeScreenSections.Model.Dto;
+using Jellyfin.Plugin.SamHomeSections.Configuration;
+using Jellyfin.Plugin.SamHomeSections.Model.Dto;
 using MediaBrowser.Model.Dto;
 using MediaBrowser.Model.Querying;
 using Microsoft.AspNetCore.Http;
 
-namespace Jellyfin.Plugin.HomeScreenSections.Library
+namespace Jellyfin.Plugin.SamHomeSections.Library
 {
     public interface IHomeScreenManager
     {

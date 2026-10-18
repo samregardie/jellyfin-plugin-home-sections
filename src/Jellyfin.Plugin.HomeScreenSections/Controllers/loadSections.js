@@ -88,7 +88,7 @@
                 queryParams.EnableRewatching = _userSettings.enableRewatchingInNextUp();
             }
             
-            var getUrl = apiClient.getUrl("HomeScreen/Section/" + sectionInfo.Section, queryParams);
+            var getUrl = apiClient.getUrl("SamHomeSections/Section/" + sectionInfo.Section, queryParams);
             return apiClient.getJSON(getUrl);
         }
     }
@@ -386,7 +386,7 @@
     }
     
     function getHomeScreenSectionsMeta(_apiClient) {
-        return _apiClient.getJSON(_apiClient.getUrl("HomeScreen/Meta"));
+        return _apiClient.getJSON(_apiClient.getUrl("SamHomeSections/Meta"));
     }
     
     function isUserUsingHomeScreenSections(pluginMeta, _userSettings) {
@@ -507,7 +507,7 @@
             window.HssPageMeta.Finished = true;
         }
 
-        var getSectionsUrl = apiClient.getUrl("HomeScreen/Sections", getSectionsData);
+        var getSectionsUrl = apiClient.getUrl("SamHomeSections/Sections", getSectionsData);
 
         return apiClient.getJSON(getSectionsUrl).then(function (response) {
             if (response.TotalRecordCount === 0 && window.HssPageMeta.Page > 1) {

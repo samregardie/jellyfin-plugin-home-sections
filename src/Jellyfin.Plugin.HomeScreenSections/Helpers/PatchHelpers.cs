@@ -2,15 +2,15 @@ using System.Reflection;
 using System.Runtime.Loader;
 using System.Threading.Channels;
 // using HarmonyLib;
-using Jellyfin.Plugin.HomeScreenSections.Configuration;
-using Jellyfin.Plugin.HomeScreenSections.Library;
-using Jellyfin.Plugin.HomeScreenSections.Services;
+using Jellyfin.Plugin.SamHomeSections.Configuration;
+using Jellyfin.Plugin.SamHomeSections.Library;
+using Jellyfin.Plugin.SamHomeSections.Services;
 using MediaBrowser.Controller.Library;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json.Linq;
 
-namespace Jellyfin.Plugin.HomeScreenSections.Helpers;
+namespace Jellyfin.Plugin.SamHomeSections.Helpers;
 
 public class PatchHelpers
 {
@@ -93,7 +93,7 @@ public class PatchHelpers
 
                     sectionObj["title"] = info.DisplayText;
                     sectionObj["orientation"] = info.ViewMode == SectionViewMode.Portrait ? "vertical" : "horizontal";
-                    sectionObj["custom"]!["endpoint"] = $"/HomeScreen/Section/{info.Section}";
+                    sectionObj["custom"]!["endpoint"] = $"/SamHomeSections/Section/{info.Section}";
                     sectionObj["custom"]!["query"] = new JObject()
                     {
                         { "additionalData", info.AdditionalData },

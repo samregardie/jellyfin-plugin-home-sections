@@ -1,10 +1,10 @@
 using Jellyfin.Extensions;
-using Jellyfin.Plugin.HomeScreenSections.Configuration;
-using Jellyfin.Plugin.HomeScreenSections.Helpers;
-using Jellyfin.Plugin.HomeScreenSections.JellyfinVersionSpecific;
-using Jellyfin.Plugin.HomeScreenSections.Library;
-using Jellyfin.Plugin.HomeScreenSections.Model.Dto;
-using Jellyfin.Plugin.HomeScreenSections.Services;
+using Jellyfin.Plugin.SamHomeSections.Configuration;
+using Jellyfin.Plugin.SamHomeSections.Helpers;
+using Jellyfin.Plugin.SamHomeSections.JellyfinVersionSpecific;
+using Jellyfin.Plugin.SamHomeSections.Library;
+using Jellyfin.Plugin.SamHomeSections.Model.Dto;
+using Jellyfin.Plugin.SamHomeSections.Services;
 using MediaBrowser.Controller.Dto;
 using MediaBrowser.Controller.Entities;
 using MediaBrowser.Controller.Entities.Movies;
@@ -14,7 +14,7 @@ using MediaBrowser.Model.Entities;
 using MediaBrowser.Model.Querying;
 using Microsoft.AspNetCore.Http;
 
-namespace Jellyfin.Plugin.HomeScreenSections.HomeScreen.Sections;
+namespace Jellyfin.Plugin.SamHomeSections.HomeScreen.Sections;
 
 public class GenreSection : IHomeScreenSection
 {
@@ -335,7 +335,42 @@ public class GenreSection : IHomeScreenSection
             return (Genre: genre, Score: score);
         }).ToArray();
 
+        if (result.Length == 0)
+        {
+            result = GetFallbackGenres(user, folderIds);
+        }
+
         return result;
+    }
+
+    // Used when the user has no watch history or favourites yet, so new users still get genre rows.
+    // Genres are weighted by how many movies in a random sample of the user's libraries have them.
+    private (string Genre, int Score)[] GetFallbackGenres(User user, Guid[] folderIds)
+    {
+        List<Movie> sampledMovies = folderIds.SelectMany(folderId =>
+        {
+            BaseItem? item = m_libraryManager.GetParentItem(folderId, user.Id);
+
+            if (item is not Folder folder)
+            {
+                folder = m_libraryManager.GetUserRootFolder();
+            }
+
+            return folder.GetItems(new InternalItemsQuery(user)
+            {
+                IncludeItemTypes = new[] { BaseItemKind.Movie },
+                OrderBy = new[] { (ItemSortBy.Random, SortOrder.Descending) },
+                Recursive = true,
+                ParentId = folderId,
+                Limit = 200
+            }).Items;
+        }).OfType<Movie>().ToList();
+
+        return sampledMovies
+            .SelectMany(movie => movie.Genres)
+            .GroupBy(genre => genre)
+            .Select(g => (Genre: g.Key, Score: g.Count()))
+            .ToArray();
     }
 
     public HomeScreenSectionInfo GetInfo()

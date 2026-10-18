@@ -1,11 +1,11 @@
-﻿using Jellyfin.Plugin.HomeScreenSections.Library;
-using Jellyfin.Plugin.HomeScreenSections.Services;
+﻿using Jellyfin.Plugin.SamHomeSections.Library;
+using Jellyfin.Plugin.SamHomeSections.Services;
 using MediaBrowser.Controller.Dto;
 using MediaBrowser.Controller.Entities;
 using MediaBrowser.Controller.Library;
 using MediaBrowser.Model.Entities;
 
-namespace Jellyfin.Plugin.HomeScreenSections.HomeScreen.Sections.Persons
+namespace Jellyfin.Plugin.SamHomeSections.HomeScreen.Sections.Persons
 {
     public class StarringSection : PersonsSectionBase
     {

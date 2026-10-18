@@ -1,7 +1,7 @@
 ﻿using System.Collections.Concurrent;
-using Jellyfin.Plugin.HomeScreenSections.Library;
+using Jellyfin.Plugin.SamHomeSections.Library;
 
-namespace Jellyfin.Plugin.HomeScreenSections.Data
+namespace Jellyfin.Plugin.SamHomeSections.Data
 {
     public class UserSectionsDataCache
     {

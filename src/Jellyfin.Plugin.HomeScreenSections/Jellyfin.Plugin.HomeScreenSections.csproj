@@ -11,6 +11,8 @@
         <Nullable>enable</Nullable>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
         <Version>3.0.0.0</Version>
+        <AssemblyName>Jellyfin.Plugin.SamHomeSections</AssemblyName>
+        <RootNamespace>Jellyfin.Plugin.SamHomeSections</RootNamespace>
         <RepositoryUrl>https://github.com/IAmParadox27/jellyfin-plugin-home-sections</RepositoryUrl>
         <RepositoryType>GitHub</RepositoryType>
     </PropertyGroup>
@@ -104,7 +106,7 @@
     </Target>
     <Target Name="GenerateAssemblyMetadata_JellyfinVersion" BeforeTargets="BeforeCompile">
         <ItemGroup>
-            <AssemblyAttribute Include="Jellyfin.Plugin.HomeScreenSections.Attributes.JellyfinVersionAttribute">
+            <AssemblyAttribute Include="Jellyfin.Plugin.SamHomeSections.Attributes.JellyfinVersionAttribute">
                 <_Parameter1>$(JellyfinVersion)</_Parameter1>
             </AssemblyAttribute>
         </ItemGroup>

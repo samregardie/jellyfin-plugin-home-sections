@@ -1,10 +1,10 @@
 ﻿using System.Reflection;
 using System.Text.RegularExpressions;
-using Jellyfin.Plugin.HomeScreenSections.Attributes;
-using Jellyfin.Plugin.HomeScreenSections.Model;
+using Jellyfin.Plugin.SamHomeSections.Attributes;
+using Jellyfin.Plugin.SamHomeSections.Model;
 using MediaBrowser.Common.Net;
 
-namespace Jellyfin.Plugin.HomeScreenSections.Helpers
+namespace Jellyfin.Plugin.SamHomeSections.Helpers
 {
     public static class TransformationPatches
     {
@@ -72,8 +72,8 @@ namespace Jellyfin.Plugin.HomeScreenSections.Helpers
                 cacheParam = $"?v={pluginVersion}&c={pluginConfig.CacheBustCounter}";
             }
 
-            string replacementText0 = $"<link rel=\"stylesheet\" href=\"{rootPath}/HomeScreen/home-screen-sections.css{cacheParam}\" />";
-            string replacementText1 = $"<script type=\"text/javascript\" plugin=\"Jellyfin.Plugin.HomeScreenSections\" src=\"{rootPath}/HomeScreen/home-screen-sections.js{cacheParam}\" defer></script>";
+            string replacementText0 = $"<link rel=\"stylesheet\" href=\"{rootPath}/SamHomeSections/home-screen-sections.css{cacheParam}\" />";
+            string replacementText1 = $"<script type=\"text/javascript\" plugin=\"Jellyfin.Plugin.SamHomeSections\" src=\"{rootPath}/SamHomeSections/home-screen-sections.js{cacheParam}\" defer></script>";
             
             return content.Contents!
                 .Replace("</head>", $"{replacementText0}</head>")

@@ -1,7 +1,7 @@
 ﻿using System.Xml.Serialization;
 using MediaBrowser.Model.Plugins;
 
-namespace Jellyfin.Plugin.HomeScreenSections.Configuration
+namespace Jellyfin.Plugin.SamHomeSections.Configuration
 {
     public class PluginConfiguration : BasePluginConfiguration
     {

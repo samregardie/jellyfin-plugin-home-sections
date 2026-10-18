@@ -1,7 +1,7 @@
 using System.Security.Claims;
 using MediaBrowser.Controller.Library;
 
-namespace Jellyfin.Plugin.HomeScreenSections.Helpers
+namespace Jellyfin.Plugin.SamHomeSections.Helpers
 {
     internal static class UserAuthorizationHelper
     {

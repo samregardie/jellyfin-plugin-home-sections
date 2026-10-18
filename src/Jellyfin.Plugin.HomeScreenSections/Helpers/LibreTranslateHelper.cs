@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Jellyfin.Plugin.HomeScreenSections.Helpers;
+namespace Jellyfin.Plugin.SamHomeSections.Helpers;
 
 public static class LibreTranslateHelper
 {

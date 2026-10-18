@@ -1,15 +1,15 @@
 using System.Reflection;
-using Jellyfin.Plugin.HomeScreenSections.Data;
-using Jellyfin.Plugin.HomeScreenSections.HomeScreen;
-using Jellyfin.Plugin.HomeScreenSections.JellyfinVersionSpecific;
-using Jellyfin.Plugin.HomeScreenSections.Library;
-using Jellyfin.Plugin.HomeScreenSections.Services;
+using Jellyfin.Plugin.SamHomeSections.Data;
+using Jellyfin.Plugin.SamHomeSections.HomeScreen;
+using Jellyfin.Plugin.SamHomeSections.JellyfinVersionSpecific;
+using Jellyfin.Plugin.SamHomeSections.Library;
+using Jellyfin.Plugin.SamHomeSections.Services;
 using MediaBrowser.Common.Configuration;
 using MediaBrowser.Controller;
 using MediaBrowser.Controller.Plugins;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Jellyfin.Plugin.HomeScreenSections
+namespace Jellyfin.Plugin.SamHomeSections
 {
     public class PluginServiceRegistrator : IPluginServiceRegistrator
     {
